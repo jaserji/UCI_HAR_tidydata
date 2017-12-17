@@ -1,0 +1,115 @@
+Feature Selection 
+=================
+The execution of the sctipt UCI_HAR_tidydata.R over the UCI_HAR data set will creaste two new variables dataset in R:
+
+1. tidydataset:  Each observation include all variables with mean and std in its names for each subject and activities.
+It has 88 columns. The firsts 86 are the features measured listed below: 
+
+
+ [1] "tBodyAcc.mean...X"                    "tBodyAcc.mean...Y"                   
+ [3] "tBodyAcc.mean...Z"                    "tBodyAcc.std...X"                    
+ [5] "tBodyAcc.std...Y"                     "tBodyAcc.std...Z"                    
+ [7] "tGravityAcc.mean...X"                 "tGravityAcc.mean...Y"                
+ [9] "tGravityAcc.mean...Z"                 "tGravityAcc.std...X"                 
+[11] "tGravityAcc.std...Y"                  "tGravityAcc.std...Z"                 
+[13] "tBodyAccJerk.mean...X"                "tBodyAccJerk.mean...Y"               
+[15] "tBodyAccJerk.mean...Z"                "tBodyAccJerk.std...X"                
+[17] "tBodyAccJerk.std...Y"                 "tBodyAccJerk.std...Z"                
+[19] "tBodyGyro.mean...X"                   "tBodyGyro.mean...Y"                  
+[21] "tBodyGyro.mean...Z"                   "tBodyGyro.std...X"                   
+[23] "tBodyGyro.std...Y"                    "tBodyGyro.std...Z"                   
+[25] "tBodyGyroJerk.mean...X"               "tBodyGyroJerk.mean...Y"              
+[27] "tBodyGyroJerk.mean...Z"               "tBodyGyroJerk.std...X"               
+[29] "tBodyGyroJerk.std...Y"                "tBodyGyroJerk.std...Z"               
+[31] "tBodyAccMag.mean.."                   "tBodyAccMag.std.."                   
+[33] "tGravityAccMag.mean.."                "tGravityAccMag.std.."                
+[35] "tBodyAccJerkMag.mean.."               "tBodyAccJerkMag.std.."               
+[37] "tBodyGyroMag.mean.."                  "tBodyGyroMag.std.."                  
+[39] "tBodyGyroJerkMag.mean.."              "tBodyGyroJerkMag.std.."              
+[41] "fBodyAcc.mean...X"                    "fBodyAcc.mean...Y"                   
+[43] "fBodyAcc.mean...Z"                    "fBodyAcc.std...X"                    
+[45] "fBodyAcc.std...Y"                     "fBodyAcc.std...Z"                    
+[47] "fBodyAcc.meanFreq...X"                "fBodyAcc.meanFreq...Y"               
+[49] "fBodyAcc.meanFreq...Z"                "fBodyAccJerk.mean...X"               
+[51] "fBodyAccJerk.mean...Y"                "fBodyAccJerk.mean...Z"               
+[53] "fBodyAccJerk.std...X"                 "fBodyAccJerk.std...Y"                
+[55] "fBodyAccJerk.std...Z"                 "fBodyAccJerk.meanFreq...X"           
+[57] "fBodyAccJerk.meanFreq...Y"            "fBodyAccJerk.meanFreq...Z"           
+[59] "fBodyGyro.mean...X"                   "fBodyGyro.mean...Y"                  
+[61] "fBodyGyro.mean...Z"                   "fBodyGyro.std...X"                   
+[63] "fBodyGyro.std...Y"                    "fBodyGyro.std...Z"                   
+[65] "fBodyGyro.meanFreq...X"               "fBodyGyro.meanFreq...Y"              
+[67] "fBodyGyro.meanFreq...Z"               "fBodyAccMag.mean.."                  
+[69] "fBodyAccMag.std.."                    "fBodyAccMag.meanFreq.."              
+[71] "fBodyBodyAccJerkMag.mean.."           "fBodyBodyAccJerkMag.std.."           
+[73] "fBodyBodyAccJerkMag.meanFreq.."       "fBodyBodyGyroMag.mean.."             
+[75] "fBodyBodyGyroMag.std.."               "fBodyBodyGyroMag.meanFreq.."         
+[77] "fBodyBodyGyroJerkMag.mean.."          "fBodyBodyGyroJerkMag.std.."          
+[79] "fBodyBodyGyroJerkMag.meanFreq.."      "angle.tBodyAccMean.gravity."         
+[81] "angle.tBodyAccJerkMean..gravityMean." "angle.tBodyGyroMean.gravityMean."    
+[83] "angle.tBodyGyroJerkMean.gravityMean." "angle.X.gravityMean."                
+[85] "angle.Y.gravityMean."                 "angle.Z.gravityMean."                 
+
+
+The last two columns are the subject and activity: 
+
+[87] "subject"                              "activity"
+
+"subject" variaboe describes the person who did the activity from 1 to 30
+"activity" variable describes the activity done:
+
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+2. tidydsmean: Each observation describes the average for each features grouped by subject and activity. The column are the
+same as in the tidydataset but it has added at the end "MeanValue" for indicating that is the Mean Value. Two two firsts columns
+are the subject and the activity.
+
+ [1] "activity"                                       "subject"                                       
+ [3] "tBodyAcc.mean...X_MeanValue"                    "tBodyAcc.mean...Y_MeanValue"                   
+ [5] "tBodyAcc.mean...Z_MeanValue"                    "tBodyAcc.std...X_MeanValue"                    
+ [7] "tBodyAcc.std...Y_MeanValue"                     "tBodyAcc.std...Z_MeanValue"                    
+ [9] "tGravityAcc.mean...X_MeanValue"                 "tGravityAcc.mean...Y_MeanValue"                
+[11] "tGravityAcc.mean...Z_MeanValue"                 "tGravityAcc.std...X_MeanValue"                 
+[13] "tGravityAcc.std...Y_MeanValue"                  "tGravityAcc.std...Z_MeanValue"                 
+[15] "tBodyAccJerk.mean...X_MeanValue"                "tBodyAccJerk.mean...Y_MeanValue"               
+[17] "tBodyAccJerk.mean...Z_MeanValue"                "tBodyAccJerk.std...X_MeanValue"                
+[19] "tBodyAccJerk.std...Y_MeanValue"                 "tBodyAccJerk.std...Z_MeanValue"                
+[21] "tBodyGyro.mean...X_MeanValue"                   "tBodyGyro.mean...Y_MeanValue"                  
+[23] "tBodyGyro.mean...Z_MeanValue"                   "tBodyGyro.std...X_MeanValue"                   
+[25] "tBodyGyro.std...Y_MeanValue"                    "tBodyGyro.std...Z_MeanValue"                   
+[27] "tBodyGyroJerk.mean...X_MeanValue"               "tBodyGyroJerk.mean...Y_MeanValue"              
+[29] "tBodyGyroJerk.mean...Z_MeanValue"               "tBodyGyroJerk.std...X_MeanValue"               
+[31] "tBodyGyroJerk.std...Y_MeanValue"                "tBodyGyroJerk.std...Z_MeanValue"               
+[33] "tBodyAccMag.mean.._MeanValue"                   "tBodyAccMag.std.._MeanValue"                   
+[35] "tGravityAccMag.mean.._MeanValue"                "tGravityAccMag.std.._MeanValue"                
+[37] "tBodyAccJerkMag.mean.._MeanValue"               "tBodyAccJerkMag.std.._MeanValue"               
+[39] "tBodyGyroMag.mean.._MeanValue"                  "tBodyGyroMag.std.._MeanValue"                  
+[41] "tBodyGyroJerkMag.mean.._MeanValue"              "tBodyGyroJerkMag.std.._MeanValue"              
+[43] "fBodyAcc.mean...X_MeanValue"                    "fBodyAcc.mean...Y_MeanValue"                   
+[45] "fBodyAcc.mean...Z_MeanValue"                    "fBodyAcc.std...X_MeanValue"                    
+[47] "fBodyAcc.std...Y_MeanValue"                     "fBodyAcc.std...Z_MeanValue"                    
+[49] "fBodyAcc.meanFreq...X_MeanValue"                "fBodyAcc.meanFreq...Y_MeanValue"               
+[51] "fBodyAcc.meanFreq...Z_MeanValue"                "fBodyAccJerk.mean...X_MeanValue"               
+[53] "fBodyAccJerk.mean...Y_MeanValue"                "fBodyAccJerk.mean...Z_MeanValue"               
+[55] "fBodyAccJerk.std...X_MeanValue"                 "fBodyAccJerk.std...Y_MeanValue"                
+[57] "fBodyAccJerk.std...Z_MeanValue"                 "fBodyAccJerk.meanFreq...X_MeanValue"           
+[59] "fBodyAccJerk.meanFreq...Y_MeanValue"            "fBodyAccJerk.meanFreq...Z_MeanValue"           
+[61] "fBodyGyro.mean...X_MeanValue"                   "fBodyGyro.mean...Y_MeanValue"                  
+[63] "fBodyGyro.mean...Z_MeanValue"                   "fBodyGyro.std...X_MeanValue"                   
+[65] "fBodyGyro.std...Y_MeanValue"                    "fBodyGyro.std...Z_MeanValue"                   
+[67] "fBodyGyro.meanFreq...X_MeanValue"               "fBodyGyro.meanFreq...Y_MeanValue"              
+[69] "fBodyGyro.meanFreq...Z_MeanValue"               "fBodyAccMag.mean.._MeanValue"                  
+[71] "fBodyAccMag.std.._MeanValue"                    "fBodyAccMag.meanFreq.._MeanValue"              
+[73] "fBodyBodyAccJerkMag.mean.._MeanValue"           "fBodyBodyAccJerkMag.std.._MeanValue"           
+[75] "fBodyBodyAccJerkMag.meanFreq.._MeanValue"       "fBodyBodyGyroMag.mean.._MeanValue"             
+[77] "fBodyBodyGyroMag.std.._MeanValue"               "fBodyBodyGyroMag.meanFreq.._MeanValue"         
+[79] "fBodyBodyGyroJerkMag.mean.._MeanValue"          "fBodyBodyGyroJerkMag.std.._MeanValue"          
+[81] "fBodyBodyGyroJerkMag.meanFreq.._MeanValue"      "angle.tBodyAccMean.gravity._MeanValue"         
+[83] "angle.tBodyAccJerkMean..gravityMean._MeanValue" "angle.tBodyGyroMean.gravityMean._MeanValue"    
+[85] "angle.tBodyGyroJerkMean.gravityMean._MeanValue" "angle.X.gravityMean._MeanValue"                
+[87] "angle.Y.gravityMean._MeanValue"                 "angle.Z.gravityMean._MeanValue"
