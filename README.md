@@ -1,6 +1,8 @@
 ==================================================================
-Script that modiifies Human Activity Recognition Using Smartphones Dataset for Getting and Cleaning Data Course Project
+Script that modiifies Human Activity Recognition Using Smartphones 
+Dataset for Getting and Cleaning Data Course Project
 Version 1.0
+
 ==================================================================
 Data Set authors:
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
@@ -9,7 +11,7 @@ DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
+
 ==================================================================
 Script author github repository:
 https://github.com/jaserji/UCI_HAR_tidydata
