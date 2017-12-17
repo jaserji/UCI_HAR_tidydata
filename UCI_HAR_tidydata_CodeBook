@@ -1,8 +1,13 @@
 Feature Selection 
 =================
-The execution of the sctipt UCI_HAR_tidydata.R over the UCI_HAR data set will creaste two new variables dataset in R:
+The execution of the sctipt UCI_HAR_tidydata.R over the UCI_HAR data set will creaste two new variables dataset in R and 
+one csv file:
 
-1. tidydataset:  Each observation include all variables with mean and std in its names for each subject and activities.
+CSV File output:
+
+1. output.csv in working directory withe the tidydsmean detailed in 3.
+
+2. tidydataset:  Each observation include all variables with mean and std in its names for each subject and activities.
 It has 88 columns. The firsts 86 are the features measured listed below: 
 
 
@@ -65,7 +70,7 @@ SITTING
 STANDING
 LAYING
 
-2. tidydsmean: Each observation describes the average for each features grouped by subject and activity. The column are the
+3. tidydsmean: Each observation describes the average for each features grouped by subject and activity. The column are the
 same as in the tidydataset but it has added at the end "MeanValue" for indicating that is the Mean Value. Two two firsts columns
 are the subject and the activity.
 
