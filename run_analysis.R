@@ -66,4 +66,5 @@ tidydataset <- select(tidydataset,matches('mean|std|activity|subject'))
 
 ## Create new dataset named tidydsmean group be activity and subject and summarising by mean
 tidydsmean <- tidydataset %>% group_by(activity,subject) %>% summarise_all(funs(MeanValue=mean))
-#View(tidydsmean)
+
+write.table(tidydsmean,file = "output.csv",row.name=FALSE)
