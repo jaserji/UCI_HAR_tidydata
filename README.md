@@ -7,6 +7,7 @@ Script author github repository:
 https://github.com/jaserji/UCI_HAR_tidydata
 
 UCI_HAR_tidydata Repository include the following files:
+
 ========================================================
 
 - 'README.txt'
