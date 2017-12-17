@@ -1,9 +1,11 @@
 ==================================================================
+
 Script that modiifies Human Activity Recognition Using Smartphones 
 Dataset for Getting and Cleaning Data Course Project
 Version 1.0
 
 ==================================================================
+
 Data Set authors:
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
