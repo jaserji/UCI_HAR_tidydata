@@ -3,13 +3,12 @@ Script that modiifies Human Activity Recognition Using Smartphones Dataset for G
 Version 1.0
 
 
-Script author github repository:
+Github repository:
 --------------------------------
 https://github.com/jaserji/UCI_HAR_tidydata
 
 UCI_HAR_tidydata Repository include the following files:
-========================================================
-
+--------------------------------------------------------
 - 'README.txt'
 
 - 'UCI_HAR_tidydata.R'
@@ -17,7 +16,8 @@ UCI_HAR_tidydata Repository include the following files:
 - 'UCI_HAR_tidydata_CodeBook'
 
 
-==================================================================
+Original Dataset iunformation:
+------------------------------
 
 Data Set authors:
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
@@ -34,8 +34,6 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 For each record it is provided:
 
-======================================
-
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
 - A 561-feature vector with time and frequency domain variables. 
@@ -44,7 +42,6 @@ For each record it is provided:
 
 Data Set License:
 
-=================
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
