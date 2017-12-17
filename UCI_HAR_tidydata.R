@@ -60,14 +60,10 @@ trainx <- mutate(trainx, activity = unlist(select(trainy,activity)))
 ## Add both test and train
 tidydataset <- rbind(tidydataset,trainx)
 
+## Show inly mean and std columns
 tidydataset <- select(tidydataset,matches('mean|std|activity|subject'))
-
 #View(tidydataset)
 
-
-
-
-
-
-
-
+## Create new dataset named tidydsmean group be activity and subject and summarising by mean
+tidydsmean <- tidydataset %>% group_by(activity,subject) %>% summarise_all(funs(MeanValue=mean))
+#View(tidydsmean)
