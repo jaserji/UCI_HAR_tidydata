@@ -1,6 +1,5 @@
-==================================================================
-Script that modiifies Human Activity Recognition Using Smartphones 
-Dataset for Getting and Cleaning Data Course Project
+Script that modiifies Human Activity Recognition Using Smartphones Dataset for Getting and Cleaning Data Course Project
+=======================================================================================================================
 Version 1.0
 
 
