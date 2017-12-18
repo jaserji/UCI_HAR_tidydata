@@ -15,6 +15,14 @@ UCI_HAR_tidydata Repository include the following files:
 
 - 'UCI_HAR_tidydata_CodeBook'
 
+Procedure to clean and tidy data:
+---------------------------------
+
+From original data set we will use the information provided for:
+1. Identify subject for each observation and add this information to the tidy data set
+2. Include the descrtiption about activity not only the code but the long description
+3. Filter only features with mean and std values
+
 
 Original Dataset iunformation:
 ------------------------------
